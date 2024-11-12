@@ -31,7 +31,8 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = False
 
 ALLOWED_HOSTS = ['8000-joanne1980-djangoblog-8zabr6vzwig.ws.codeinstitute-ide.net', 'blog-walkthrough-5715b26add6a.herokuapp.com']
-# CSRF_TRUSTED_ORIGINS =['https://*.codeinstitute-ide.net','https://*.herokuapp.com']
+CSRF_TRUSTED_ORIGINS =['https://*.codeinstitute-ide.net',
+'https://*.herokuapp.com']
 
 # Application definition
 
