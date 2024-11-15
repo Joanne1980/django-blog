@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-r+y@xe6kd9)0#5-zb%gbv(hyzcj#$fzf!ta*l13%u$ulv^vh8^
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['8000-joanne1980-djangoblog-8zabr6vzwig.ws.codeinstitute-ide.net', 'blog-walkthrough-5715b26add6a.herokuapp.com']
 CSRF_TRUSTED_ORIGINS =['https://*.codeinstitute-ide.net',
@@ -51,6 +51,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware,WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -130,6 +131,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
